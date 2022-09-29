@@ -8,6 +8,7 @@
 
     // Actor partials.
     "systems/dwn/templates/actor/parts/actor-features.html",
+    "systems/dwn/templates/actor/parts/actor-skills.html",
     "systems/dwn/templates/actor/parts/actor-items.html",
     "systems/dwn/templates/actor/parts/actor-spells.html",
     "systems/dwn/templates/actor/parts/actor-effects.html",

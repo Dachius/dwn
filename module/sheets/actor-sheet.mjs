@@ -84,8 +84,8 @@ export class DWNActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const features = [];
+    const skills = [];
     const spells = {
-      0: [],
       1: [],
       2: [],
       3: [],
@@ -108,6 +108,9 @@ export class DWNActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         features.push(i);
       }
+      else if (i.type === 'skill') {
+        skills.push(i);
+      }
       // Append to spells.
       else if (i.type === 'spell') {
         if (i.data.spellLevel != undefined) {
@@ -119,6 +122,7 @@ export class DWNActorSheet extends ActorSheet {
     // Assign and return
     context.gear = gear;
     context.features = features;
+    context.skills = skills;
     context.spells = spells;
    }
 

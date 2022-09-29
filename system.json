@@ -1,7 +1,7 @@
 {
   "name": "dwn",
   "title": "Dungeons Without Number",
-  "description": "The Dungeons Without Number system for FoundryVTT!",
+  "description": "Dach's WWN/AD&D 2e edit",
   "version": "1.0.0",
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "9",
@@ -20,7 +20,6 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
   "url": "",
   "manifest": "",
   "download": "",

@@ -51,7 +51,12 @@ export class DWNActor extends Actor {
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(data.abilities)) {
       // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
+      if(ability.value < 10){
+        ability.mod = Math.ceil((ability.value/3) - 4);
+      }
+      else{
+        ability.mod = Math.floor((ability.value/3) - 3);
+      }
     }
   }
 

@@ -23,11 +23,11 @@
         </div>
 
         <div class="resource flex-group-center">
-          <label for="data.power.value" class="resource-label">Power</label>
+          <label for="data.experience.value" class="resource-label">XP</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
+          <input type="text" name="data.experience.value" value="{{data.experience.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
+          <input type="text" name="data.experience.max" value="{{data.experience.max}}" data-dtype="Number"/>
           </div>
         </div>
 
@@ -75,11 +75,14 @@
         </aside>
 
         {{!-- For the main features list, span the right two columns --}}
-        <section class="main grid-span-2">
+        <section class="main grid-span-1">
+            {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+            {{> "systems/dwn/templates/actor/parts/actor-skills.html"}}
+        </section>
+        <section class="main grid-span-1">
           {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
           {{> "systems/dwn/templates/actor/parts/actor-features.html"}}
         </section>
-
       </section>
     </div>
 
