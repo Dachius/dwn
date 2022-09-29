@@ -21,7 +21,7 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "url": "",
-  "manifest": "https://github.com/Dachius/dwn/releases/latest/download/system.json",
+  "manifest": "https://github.com/Dachius/dwn/releases/v0.0.0-alpha/download/system.json",
   "download": "",
   "license": "LICENSE.txt"
 }
