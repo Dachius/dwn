@@ -1,0 +1,37 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+      <img class="profile-img" src="{{item.img}}" system-edit="img" title="{{item.name}}"/>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        <div class="resource">
+          <label class="resource-label">Level</label>
+          <input type="text" name="system.level" value="{{system.level}}" system-dtype="Number"/>
+        </div>
+      </div>
+    </header>
+  
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" system-group="primary">
+      <a class="item" system-tab="description">Description</a>
+      <a class="item" system-tab="attributes">Attributes</a>
+    </nav>
+  
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+  
+      {{!-- Description Tab --}}
+      <div class="tab" system-group="primary" system-tab="description">
+        {{editor content=system.description target="system.description" rollsystem=rollsystem button=true owner=owner editable=editable}}
+      </div>
+  
+      {{!-- Attributes Tab --}}
+      <div class="tab attributes" system-group="primary" system-tab="attributes">
+        {{!-- As you add new fields, add them in here! --}}
+        <div class="resource">
+          <label class="resource-label">Roll Formula</label>
+          <input type="text" name="system.formula" value="{{system.formula}}" system-dtype="String"/>
+        </div>
+      </div>
+    </section>
+  
+  </form>
